@@ -229,10 +229,11 @@ namespace Exercitii_Munca
 
 		// 15. Write a function to remove a character at the specified position of a given string and return the new string.
 
-		public void StergeCaracterul(string s)
-		{
+		public string StergeCaracterul(string s)
+		{	
 			Console.WriteLine(s.Remove(5, 1));
-
+			return s;
+			//Trebuie refacut cu return
 		}
 
 		// 16. Write a function to create a new string from a given string with the first character of the given string added at the front and back.
@@ -273,14 +274,14 @@ namespace Exercitii_Munca
 
 		// 19. Write a function to check if a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one
 
-		public string Script (string s)
-		{	
+		public string Script(string s)
+		{
 			if (s.Length < 6)
 			{
 				return s;
 			}
 
-			else if (s.Substring(4,6).Equals("script"))
+			else if (s.Substring(4, 6).Equals("script"))
 			{
 				return s.Replace("script", "");
 			}
@@ -301,10 +302,114 @@ namespace Exercitii_Munca
 
 			string ss = s.Substring(0, 3);
 
-			return ss.ToLower() + s.Substring(3,s.Length -3);
+			return ss.ToLower() + s.Substring(3, s.Length - 3);
 
-		
-		} 
+
+		}
+
+		// 21. Write a function to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
+
+		public bool Ultimacifra(int a, int b, int c)
+		{
+			if ((a % 10 == b % 10) || (a % 10 == c % 10) || (b % 10 == c % 10))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		// 22.Write a function to convert a given number to hours and minutes.
+
+		public string Convertorore(int a)
+		{
+			TimeSpan result = TimeSpan.FromHours(a);
+			string ora = result.ToString("hh':'mm");
+			return ora;
+
+		}
+
+		// 23.Write a function to convert the letters of a given string in alphabetical order.
+
+		public string Abc(string s)
+		{
+			char[] caractere = s.ToArray();
+			Array.Sort(caractere);
+			return new string(caractere);
+
+		}
+
+		// 24. Write a function to count the number of vowels in a given string.
+
+		public int Vocale(string s)
+		{
+			string vocale = "aeiou";
+			int v = 0;
+			for (int i = 0; i < s.Length; i++)
+			{
+				if (vocale.Contains(char.ToLower(s[i])))
+				{
+					v++;
+				}
+			}
+
+			return v;
+
+		}
+
+		// 25. Write a function to extract the first half of a string of even length
+
+		public string Jumatate(string s)
+		{
+			string ss = s.Substring(0, s.Length / 2);
+			return ss;
+		}
+
+		// 26. Write a function to check if 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.
+
+		public bool Unu(int[] numar)
+		{
+			if ((numar[0] == 1 || numar[numar.Length - 1] == 1) && (numar.Length >= 1))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		// 28. Write a   function to change the capitalization of all letters in a given string.
+
+		public string Literemari(string s)
+		{
+			//char[] chars = s.ToCharArray();
+			StringBuilder ss = new StringBuilder();
+
+
+			for (int i = 0; i < s.Length; i++)
+			{
+				if (char.IsLower(s[i]))
+				{
+					ss.Append(char.ToUpper(s[i]));
+
+				}
+
+				else if (char.IsUpper(s[i]))
+				{
+					ss.Append(char.ToLower(s[i]));
+				}
+			}
+
+			
+
+			return ss.ToString();
+
+
+		}
+
 
 
 	}

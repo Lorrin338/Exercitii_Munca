@@ -8,7 +8,7 @@ namespace Exercitii_Munca
 {
 	class Program
 	{
-		
+
 
 		static void Main(string[] args)
 		{
@@ -84,9 +84,9 @@ namespace Exercitii_Munca
 			rezolvare_Exercitii.Pycaractere("asdadasPythonsadasdsa");
 			Console.WriteLine();
 
-			Console.WriteLine("Ex 15.");
-			rezolvare_Exercitii.StergeCaracterul("removeoneofus");
-			Console.WriteLine();
+			//Console.WriteLine("Ex 15.");
+			//rezolvare_Exercitii.StergeCaracterul("removeoneofus");
+			//Console.WriteLine();
 
 			Console.WriteLine("Ex 16.");
 			rezolvare_Exercitii.AdaugaCapte("liverpool");
@@ -112,15 +112,44 @@ namespace Exercitii_Munca
 			Console.WriteLine(rezolvare_Exercitii.Caracteremici("ABCliverpool"));
 			Console.WriteLine();
 
+			Console.WriteLine("Ex 21.");
+			Console.WriteLine(rezolvare_Exercitii.Ultimacifra(123, 33, 444));
+			Console.WriteLine(rezolvare_Exercitii.Ultimacifra(122, 33, 444));
+			Console.WriteLine();
 
+			Console.WriteLine("EX 22.");
+			Console.WriteLine(rezolvare_Exercitii.Convertorore(1234));
+			Console.WriteLine();
 
+			Console.WriteLine("Ex 23.");
+			Console.WriteLine(rezolvare_Exercitii.Abc("juventus"));
+			Console.WriteLine(rezolvare_Exercitii.Abc("asdasdasfssdfasdvxcvxvtgew"));
+			Console.WriteLine();
+
+			Console.WriteLine("Ex 24.");
+			Console.WriteLine(rezolvare_Exercitii.Vocale("Te Rog Sa Imi Numeri Vocalele"));
+			Console.WriteLine();
+
+			Console.WriteLine("Ex 25.");
+			Console.WriteLine(rezolvare_Exercitii.Jumatate("klsjdjasjdaskljklasdjasklj"));
+			Console.WriteLine();
+
+			Console.WriteLine("Ex 26.");
+			Console.WriteLine(rezolvare_Exercitii.Unu(new int[] { 1, 2, 3, 4 }));
+			Console.WriteLine(rezolvare_Exercitii.Unu(new int[] { 2, 3, 4, 1}));
+			Console.WriteLine(rezolvare_Exercitii.Unu(new int[] { 5, 2, 3, 4 }));
+			Console.WriteLine();
+
+			Console.WriteLine("Ex 28.");
+			Console.WriteLine(rezolvare_Exercitii.Literemari("abcABC"));
+			Console.WriteLine();
 
 
 
 			Console.Read();
 		}
 
-		
+
 
 	}
 }
